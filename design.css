@@ -1,0 +1,456 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 16 Nov 2023, 9:56:27 pm
+    Author     : amirf
+*/
+
+/*---home/index page---*/
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial;
+    box-sizing: border-box;
+}
+
+.home{
+    height: 100vh;
+    width: 100%;
+    background-color: #7ED5EA;
+}
+
+.gambar{
+    width: 15rem;
+    height: auto;
+    margin-top: 50px;
+    margin-left: 50%;
+    border-radius: 40px;
+    
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.2rem;
+    padding-top: 0.6rem;
+    padding-right: 10%;
+    padding-left: 3%;
+    padding-bottom: 10px;
+    background-color: #4B9FE1;
+}
+
+.logo{
+    font-size: 2.1rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+span{
+    color: #28559A;
+}
+
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 0.3rem 0.6rem;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+nav ul li a:hover{
+    color: #28559A;
+    transition: .4s;
+}
+
+
+
+
+
+.content{
+    position: absolute;
+    top: 60%;
+    left: 10%;
+    transform: translateY(-50%);
+}
+
+h1{
+    color: whitesmoke;
+    margin: 0.6rem 0rem 0.6rem;
+    font-size: 75px; 
+}
+
+h2 {
+    color: white;
+    letter-spacing: 0.1rem;
+    font-size: 1.2rem;
+}
+
+h3{
+    color: #28559A;
+    letter-spacing: 0.1rem;
+    font-size: 1.2rem;
+}
+
+/* For screens smaller than 768px */
+ @media screen and (max-width: 768px) { 
+    
+    .gambar { 
+        width: 20rem; 
+        margin-left: 40%; 
+    }
+
+    .logo { 
+        font-size: 1.8rem; 
+    }
+
+    h1 { 
+        font-size: 50px; 
+    }
+
+    h2, h3 { 
+        font-size: 1rem; 
+    } 
+}
+
+/* For screens smaller than 480px */ 
+@media screen and (max-width: 480px) { 
+    .gambar { 
+        width: 8rem; 
+        margin-left: 30%; 
+    }
+
+    nav { 
+        flex-direction: column; 
+        align-items: flex-start;
+        padding-right: 3%; 
+    }
+
+    .logo { 
+        font-size: 1.5rem; 
+        margin-bottom: 0.3rem; 
+    }
+
+    nav ul li { 
+        display: block; 
+        padding: 0.2rem 0.4rem; 
+    }
+
+    .content { 
+        left: 5%;
+    }
+
+    h1 { 
+        font-size: 40px; 
+    }
+
+    h2, h3 { 
+        font-size: 0.8rem; 
+    } 
+}
+
+/*---about page---*/
+
+.about{
+    width: 100%;
+    height: 100%;
+    background-color: #7ED5EA;
+}
+
+
+.about img{
+    width: 21.88rem;
+    height: auto;
+    border-radius: 40px;
+}
+
+.about-text{
+    width: 500px;
+}
+
+.main{
+    width: 75rem;
+    max-width: 95%;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about-text h2{
+    color: white;
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    margin-bottom: 1.6rem;
+}
+
+.about-text h5{
+    color: white;
+    letter-spacing: 2px;
+    font-size: 2.1rem;
+    text-transform: capitalize;
+    margin-bottom: 1.2rem;
+}
+
+.about-text p{
+    color: white;
+    letter-spacing: 1px;
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+    margin-bottom: 2.8rem;
+}
+
+button{
+    background-color: transparent;
+    color: #3378C2;
+    text-decoration: none;
+    border: 2px solid #3378C2;
+    font-weight: bold;
+    padding: 0.8rem 1.8rem;
+    border-radius: 30px;
+    transition: .3s;
+    
+}
+
+button:hover{
+    color: white;
+    background-color: #3378C2;
+    border: 2px solid #3378C2;
+    cursor: pointer;
+    font-size: 1em;
+    
+}
+
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+  .main {
+    display: block;
+  }
+
+  .about-text {
+    width: 80%;
+    margin: 2rem auto;
+  }
+
+  .about-text h2 {
+    font-size: 3rem;
+  }
+
+  .about-text h5 {
+    font-size: 2.5rem;
+  }
+}
+
+.project{
+    width: 100%;
+    background-color: #7ED5EA;
+}
+
+/*---Project Page---*/
+
+.box{
+    display: flex; 
+    justify-content: center; 
+}
+
+
+
+.card{
+    border-radius: 15px;
+    background-color: aliceblue;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    margin: 1em;
+    margin-top: 50px;
+    width: 24em;
+    height: 25em;
+    transition: .3s;
+}
+
+.card:hover{
+    width: 25em;
+    height: 26em;
+}
+
+.card h3{
+    padding-top: 2em;
+    text-align: center;
+    height: 30%;
+    
+}
+
+.card p{
+    text-align: center;
+    padding: 1em 1em 1em;
+    height: 50%;
+    
+}
+
+/* For screens smaller than 768px */ 
+@media screen and (max-width: 768px) { 
+    .box { 
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .card { 
+        width: 20em; 
+        height: 22em;
+    }
+
+    .card:hover { 
+        width: 21em; 
+        height: 23em; 
+    }
+
+    .card h3 { 
+        font-size: 1.2rem; 
+    }
+
+    .card p { 
+        font-size: 0.8rem; 
+    } 
+}
+
+/* For screens smaller than 480px */
+ @media screen and (max-width: 480px) { 
+    .card { 
+        width: 16em; 
+        height: 18em; 
+    }
+
+    .card:hover {
+        width: 17em; 
+        height: 19em; 
+    }
+
+    .card h3 { 
+        font-size: 1rem; 
+    }
+
+    .card p { 
+        font-size: 0.6rem; 
+    } 
+}
+
+/*---Contact Page---*/
+
+.contact{
+    background-color: #7ED5EA;
+}
+
+.container {
+    
+    background-color: aliceblue;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    max-width: 500px;
+    padding: 20px;
+}
+                
+.tajuk {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+input[type=text], input[type=email], textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    transition: .3s;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    font-weight: bold;
+}
+
+		
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+                
+button{
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin: auto; 
+    display: block;
+}
+                
+.texticon{
+    margin-top: 3em;
+    margin-bottom: 1em;
+}            
+
+.allicon{
+    display: flex; 
+    justify-content: center; 
+}
+                
+.icon {
+    margin: 0.5em; 
+    display: inline-block; 
+    width: 3em; 
+    height: 3em;
+    transition: 0.2s;  
+}
+
+.icon:hover{
+    width: 3.3em;
+    height: 3.3em;
+}
+                
+.error {
+    color: red;
+    font-weight: bold;
+}
+
+/* For screens smaller than 600px */
+@media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+	width: 100%;
+	margin-top: 0;
+    }
+}
+
+.error {
+    color: red;
+}
+
+
+
+
+
+
+
+

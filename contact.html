@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="design.css" type="text/css">
+      <!--  <link rel="stylesheet" href="contactTest.css" type="text/css">-->
+        <script>
+            function validateForm() {
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let subject = document.getElementById("subject").value;
+            let message = document.getElementById("message").value;
+
+            if (name === "") {
+                document.getElementById("name").focus();
+                alert("Name is required");
+                return false;
+            }
+
+            if (email === "") {
+                document.getElementById("email").focus();
+                alert("email is required");
+                return false;
+            }
+
+            if (subject === "") {
+                document.getElementById("subject").focus();
+                alert("subject is required");
+                return false;
+            }
+
+            if (message === "") {
+                document.getElementById("message").focus();
+                alert("Name is required");
+                return false;
+            }
+
+            return true;
+        }
+        </script>
+    </head>
+    <body class="contact">
+        
+        <nav>
+            <h2 class="logo">Portf<span>olio</span></h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+            </ul>
+        </nav>
+        
+        <div class="container">
+            <center>
+                <p class="tajuk">Contact Me</p>
+            </center>
+                
+		<p>Please fill in this form to contact me.</p>
+		<form name="contactForm" id="form" action="#" method="post" onsubmit="return validateForm()">
+			<div class="row">
+				<div class="col-25">
+					<label for="name">Name</label>
+				</div>
+				<div class="col-75">
+					<input type="text" id="name" name="name" placeholder="Your name...">
+					<div class="error" id="nameError"></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-25">
+					<label for="email">Email</label>
+				</div>
+				<div class="col-75">
+					<input type="email" id="email" name="email" placeholder="Your email...">
+					<div class="error" id="emailError"></div>
+				</div>
+			</div>
+                        <div class="row">
+				<div class="col-25">
+					<label for="subject">Subject</label>
+				</div>
+				<div class="col-75">
+					<input type="text" id="subject" name="subject" placeholder="Your subject...">
+					<div class="error" id="subjectError"></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-25">
+					<label for="message">Message</label>
+				</div>
+				<div class="col-75">
+					<textarea id="message" name="message" placeholder="Write something..." style="height:200px"></textarea>
+					<div class="error" id="messageError"></div>
+				</div>
+			</div>
+			<div class="row">
+				<button type="submit">Submit</button>
+			</div>
+		</form>
+        
+        <center class="texticon">You can also contact me via</center>
+                <div class="allicon">
+                    <a href="https://www.facebook.com/">
+                        <img src="Facebook icon.png"  alt="alt" class="icon"/>
+                    </a>
+                    <a href="https://twitter.com/">
+                        <img src="Twitter icon.png" alt="alt" class="icon"/>
+                    </a>
+                    <a href="https://www.whatsapp.com/">
+                        <img src="Whatsapp icon.png" alt="alt" class="icon"/>
+                    </a>
+                    <a href="https://telegram.org/">
+                        <img src="Telegram icon.png" alt="alt" class="icon"/>
+                    </a>
+                </div>
+	</div>
+   
+    </body>
+</html>
