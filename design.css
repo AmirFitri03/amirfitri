@@ -1,13 +1,9 @@
-/*
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
-*/
 /* 
     Created on : 16 Nov 2023, 9:56:27 pm
-    Author     : amirf
+    Author     : amirfitri
 */
 
-/*---home/index page---*/
+
 
 *{
     padding: 0;
@@ -16,21 +12,42 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     box-sizing: border-box;
 }
 
-.home{
+/*---All pages---*/
+.home, .about, .project, .contact{
     height: 100vh;
     width: 100%;
     background-color: #7ED5EA;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.gambar{
-    width: 15rem;
-    height: auto;
-    margin-top: 50px;
-    margin-left: 50%;
-    border-radius: 40px;
+.home{
+    background-image: url('wallpaper.jpg');
+}
+
+/*---All button---*/
+button{
+    background-color: transparent;
+    color: #3378C2;
+    text-decoration: none;
+    border: 2px solid #3378C2;
+    font-weight: bold;
+    padding: 0.8rem 1.8rem;
+    border-radius: 30px;
+    transition: .3s;
     
 }
 
+button:hover{
+    color: white;
+    background-color: #3378C2;
+    border: 2px solid #3378C2;
+    cursor: pointer;
+    font-size: 1em;
+    
+}
+
+/*---Navigation Bar---*/
 nav{
     display: flex;
     align-items: center;
@@ -39,7 +56,7 @@ nav{
     padding-top: 0.6rem;
     padding-right: 10%;
     padding-left: 3%;
-    padding-bottom: 10px;
+    padding-bottom: 0.6rem;
     background-color: #4B9FE1;
 }
 
@@ -70,9 +87,15 @@ nav ul li a:hover{
     transition: .4s;
 }
 
-
-
-
+/*----------home/index page----------*/
+.gambar{
+    width: 15rem;
+    height: auto;
+    margin-top: 2em;
+    margin-bottom: 4em;
+    margin-left: 40%;
+    border-radius: 40px;
+}
 
 .content{
     position: absolute;
@@ -94,7 +117,7 @@ h2 {
 }
 
 h3{
-    color: #28559A;
+    color: black;
     letter-spacing: 0.1rem;
     font-size: 1.2rem;
 }
@@ -103,8 +126,9 @@ h3{
  @media screen and (max-width: 768px) { 
     
     .gambar { 
-        width: 20rem; 
-        margin-left: 40%; 
+        width: 23rem; 
+        margin-left: 60%; 
+        margin-bottom: 2rem;
     }
 
     .logo { 
@@ -123,9 +147,11 @@ h3{
 /* For screens smaller than 480px */ 
 @media screen and (max-width: 480px) { 
     .gambar { 
-        width: 8rem; 
-        margin-left: 30%; 
-    }
+        width: 8rem;
+        margin-top: 0.1em; 
+        margin-left: 54%;
+        border-radius: 8px;
+        }
 
     nav { 
         flex-direction: column; 
@@ -145,6 +171,8 @@ h3{
 
     .content { 
         left: 5%;
+        bottom: 130%;
+
     }
 
     h1 { 
@@ -156,14 +184,7 @@ h3{
     } 
 }
 
-/*---about page---*/
-
-.about{
-    width: 100%;
-    height: 100%;
-    background-color: #7ED5EA;
-}
-
+/*----------about page----------*/
 
 .about img{
     width: 21.88rem;
@@ -208,31 +229,18 @@ h3{
     margin-bottom: 2.8rem;
 }
 
-button{
-    background-color: transparent;
-    color: #3378C2;
-    text-decoration: none;
-    border: 2px solid #3378C2;
-    font-weight: bold;
-    padding: 0.8rem 1.8rem;
-    border-radius: 30px;
-    transition: .3s;
-    
+.about-text button{
+    color: white;
+    border: 2px solid white;
 }
 
-button:hover{
-    color: white;
-    background-color: #3378C2;
-    border: 2px solid #3378C2;
-    cursor: pointer;
-    font-size: 1em;
-    
-}
+
 
 /* For screens smaller than 768px */
 @media (max-width: 768px) {
   .main {
     display: block;
+    padding-bottom: 0.2em;
   }
 
   .about-text {
@@ -247,14 +255,10 @@ button:hover{
   .about-text h5 {
     font-size: 2.5rem;
   }
+
 }
 
-.project{
-    width: 100%;
-    background-color: #7ED5EA;
-}
-
-/*---Project Page---*/
+/*----------Project Page----------*/
 
 .box{
     display: flex; 
@@ -282,14 +286,25 @@ button:hover{
 .card h3{
     padding-top: 2em;
     text-align: center;
-    height: 30%;
+    height: 10%;
     
 }
 
+.iconProject{
+    display: block;
+    margin-top: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15%;
+    height: 15%;
+
+}
+
 .card p{
+    margin-top: 2em;
     text-align: center;
     padding: 1em 1em 1em;
-    height: 50%;
+    height: 40%;
     
 }
 
@@ -337,14 +352,11 @@ button:hover{
 
     .card p { 
         font-size: 0.6rem; 
+        height: 30%;
     } 
 }
 
-/*---Contact Page---*/
-
-.contact{
-    background-color: #7ED5EA;
-}
+/*----------Contact Page----------*/
 
 .container {
     
@@ -446,6 +458,73 @@ button{
 .error {
     color: red;
 }
+
+/*----------Project 1,2,3----------*/
+
+.info{
+    border-radius: 20px;
+    background-color: aliceblue;
+    width: 60rem;
+    margin: auto;
+    margin-top: 50px;
+    padding-bottom: 1em;
+    display: block;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.container{
+    border-radius: 0%;
+    margin-bottom: 0%;
+}
+
+.info p, .list{
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
+    font-family: Arial;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.list{
+    padding-left: 20em;
+    padding-right: 20em;
+    text-align: left;
+}
+
+.info img{
+    margin-top: 1em;
+    margin-left: 20em ;
+    margin-right: 20em;
+    width: 22rem;
+    height: auto;
+}
+
+/* For screens smaller than 600px */
+@media (max-width: 600px) {
+    .info{
+        width: 100%;
+        border-radius: 0%;
+    }
+
+    .info img{
+        margin-left: 3rem;
+        margin-right: 2rem;
+        width: 18rem;
+    }
+
+    .list{
+        padding-left: 3em;
+        padding-right: 1em;
+    }
+}
+
+
+
+
+
 
 
 
